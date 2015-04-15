@@ -1,3 +1,6 @@
+(ns koans.21-group-by
+  (:require [koan-engine.core :refer :all]))
+
 (defn get-odds-and-evens [coll]
   (let [{odds true evens false} (group-by __ coll)]
     [odds evens]))
@@ -10,7 +13,7 @@
 
   "You can simulate filter + remove in one pass"
   (= (get-odds-and-evens [1 2 3 4 5])
-     ((partial (juxt filter remove) odd?) [1 2 3 4 5])
+     ((juxt filter remove) odd? [1 2 3 4 5])
      [[1 3 5] [2 4]])
 
   "You can also group by a primary key"

@@ -1,3 +1,6 @@
+(ns koans.11-sequence-comprehensions
+  (:require [koan-engine.core :refer :all]))
+
 (meditations
   "Sequence comprehensions can bind each element in turn to a symbol"
   (= [0 1 2 3 4 5]

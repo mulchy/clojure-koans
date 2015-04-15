@@ -1,3 +1,6 @@
+(ns koans.07-conditionals
+  (:require [koan-engine.core :refer :all]))
+
 (defn explain-defcon-level [exercise-term]
   (case exercise-term
         :fade-out          :you-and-what-army
